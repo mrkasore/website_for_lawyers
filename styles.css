@@ -24,14 +24,15 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center; */
-    margin-top: 3rem;
-    margin: 3rem;
+    padding: 3rem;
+    margin-top: 1rem;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(550px, 1fr) );
     font-size: 20px;
     gap: 3rem;
     align-items: center;
     justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
     
 }
 h1 {
@@ -39,7 +40,6 @@ h1 {
     text-align: center;
 }
 .container div {
-
     text-align: justify;
 }
 .lawyers {
@@ -47,10 +47,25 @@ h1 {
 }
 
 img {
-    height: 300px;
-    width: 600px;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
 }
 .imgs {
     display: flex;
+    flex: 0 0 auto;
     justify-content: center;
+
+}
+
+li {
+    background-color: pink;
+    list-style: none;
+    height: 100px;
+    width: 200px;
+}
+
+.slide {
+    opacity: 0;
+    height: 0;
 }
