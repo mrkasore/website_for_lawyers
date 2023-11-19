@@ -5,6 +5,12 @@ const inp_radio = document.querySelectorAll('.inp_radio');
 const prevBtn = document.querySelector('#prev');
 const nextBtn = document.querySelector('#next');
 
+const btn_all_lawyers = document.querySelector('#all_lawyers'); 
+const close_grid_btn = document.querySelector('#close_grid_btn');
+
+const header_link = document.querySelectorAll('.header_link');
+const hamburger = document.querySelector('#hamburger');
+
 
 slides[num_of_slide].style.display = 'grid';
 // slides[num_of_slide].style.opacity = 1;
@@ -37,5 +43,25 @@ function changeRadio(e) {
     slides[num_of_slide].style.display = 'grid';
 
 }
+
+// Показать весь список адвокатов
+btn_all_lawyers.addEventListener('click', function() {
+    document.querySelector('.all-slider').style.display = 'grid';
+    document.querySelector('#all_lawyers').style.display = 'none';
+});
+
+// Скрыть список адвокатов
+close_grid_btn.addEventListener('click', function() {
+    document.querySelector('.all-slider').style.display = 'none';
+    document.querySelector('#all_lawyers').style.display = 'block';
+})
+
+//переход по навигации
+header_link.forEach(item => {
+    item.addEventListener('click', function(e) {
+        document.querySelector(`.${e.target.getAttribute('data')}`).scrollIntoView();
+    })
+})
+
 
 
