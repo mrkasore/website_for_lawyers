@@ -10,6 +10,7 @@ const close_grid_btn = document.querySelector('#close_grid_btn');
 
 const header_link = document.querySelectorAll('.header_link');
 const hamburger = document.querySelector('#hamburger');
+const all_header_links = document.querySelectorAll('.header_link');
 
 
 slides[num_of_slide].style.display = 'grid';
@@ -20,7 +21,6 @@ prevBtn.addEventListener('click', changeSlide);
 nextBtn.addEventListener('click', changeSlide);
 
 function changeSlide(e) {
-    console.log(Number(e.target.getAttribute('data')));
     slides[num_of_slide].style.display = 'none';
     num_of_slide +=  Number(e.target.getAttribute('data'));
 
@@ -60,6 +60,21 @@ close_grid_btn.addEventListener('click', function() {
 header_link.forEach(item => {
     item.addEventListener('click', function(e) {
         document.querySelector(`.${e.target.getAttribute('data')}`).scrollIntoView();
+    })
+})
+
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    // document.querySelector('.b1').classList.toggle('change');
+    // document.querySelector('.b2').classList.toggle('change');
+    // document.querySelector('.b3').classList.toggle('change');
+    all_header_links.forEach(item => {
+        if(hamburger.classList == 'active') {
+            item.style.display = 'flex';
+        } else {
+            item.style.display = 'none';
+        }
+        
     })
 })
 
