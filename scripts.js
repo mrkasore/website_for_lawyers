@@ -14,8 +14,7 @@ const all_header_links = document.querySelectorAll('.header_link');
 
 
 slides[num_of_slide].style.display = 'grid';
-// slides[num_of_slide].style.opacity = 1;
-// slides[num_of_slide].style.height = '100px';
+
  
 prevBtn.addEventListener('click', changeSlide);
 nextBtn.addEventListener('click', changeSlide);
@@ -65,9 +64,7 @@ header_link.forEach(item => {
 
 hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('active');
-    // document.querySelector('.b1').classList.toggle('change');
-    // document.querySelector('.b2').classList.toggle('change');
-    // document.querySelector('.b3').classList.toggle('change');
+
     all_header_links.forEach(item => {
         if(hamburger.classList == 'active') {
             item.style.display = 'flex';

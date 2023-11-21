@@ -11,10 +11,7 @@ body {
     padding: 0;
     margin: 0;
 }
-#next, #prev {
-    opacity: 0.8;
-    border-radius: 50%;
-}
+
 #next:hover, #prev:hover {
     background-color: black;
     cursor: pointer;
@@ -218,11 +215,13 @@ ul {
 }
 
 .radio-btn {
-    text-align: center;
     position: absolute;
-    right: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     bottom: -10px;
-    transform: (-50%, 0);
+    text-align: center;
 }
 
 #prev, #next {
@@ -231,18 +230,20 @@ ul {
     width: 40px;
     font-size: 20px;
     color: white;
+    opacity: 0.8;
+    border-radius: 50%;
 }
 
 #prev {
     position: absolute;
     left: 0;
-    top: 30%;
+    top: 50%;
 }
 
 #next {
     position: absolute;
     right: 0;
-    top: 30%;
+    top: 50%;
 }
 
 h2 {
@@ -328,7 +329,18 @@ h3 {
     text-align: center;
 }
 
-@media (max-width: 450px) {
+
+
+@media (min-width: 830px) {
+    ul {
+        width: 830px;
+    }
+    .slider {
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 550px) {
     * {
         font-size: 15px;
     }
@@ -364,6 +376,21 @@ h3 {
 
     h3 {
         text-align: center;
+    }
+
+    #prev {
+        position: absolute;
+        left: 0;
+        top: 30%;
+    }
+    
+    #next {
+        position: absolute;
+        right: 0;
+        top: 30%;
+    }
+    .radio-btn {
+        bottom: auto;
     }
 
 }
